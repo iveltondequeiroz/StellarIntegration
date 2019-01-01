@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationConsole", "IntegrationConsole\IntegrationConsole.csproj", "{A4E89051-2ADB-433D-AC3F-817193A79834}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationConsole", "IntegrationConsole\IntegrationConsole.csproj", "{A4E89051-2ADB-433D-AC3F-817193A79834}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "IntegrationDB", "IntegrationDB\IntegrationDB.sqlproj", "{17C365D7-01C4-4447-B1E9-A299A487879D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests", "IntegrationTests\IntegrationTests.csproj", "{FD7EDBE3-B9BF-48A3-8A09-A7789F559405}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{17C365D7-01C4-4447-B1E9-A299A487879D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17C365D7-01C4-4447-B1E9-A299A487879D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{17C365D7-01C4-4447-B1E9-A299A487879D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{FD7EDBE3-B9BF-48A3-8A09-A7789F559405}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD7EDBE3-B9BF-48A3-8A09-A7789F559405}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD7EDBE3-B9BF-48A3-8A09-A7789F559405}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD7EDBE3-B9BF-48A3-8A09-A7789F559405}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
