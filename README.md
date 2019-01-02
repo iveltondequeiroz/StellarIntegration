@@ -1,4 +1,4 @@
-# StellarIntegrationdotnet-stellar-sdk (for c#)
+# StellarIntegration
 ## Stellar Lumens integration to an Exchange
 
 
