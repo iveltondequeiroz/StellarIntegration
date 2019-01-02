@@ -1,0 +1,48 @@
+Stellar Integration Dependencies and DB Schema
+
+NUGET Dependencies
+
+For App Configurations Settings :
+Microsoft.Extensions.Configuration
+Microsoft.Extensions.Configuration.FileExtensions
+Microsoft.Extensions.Configuration.Json
+
+for DB Access:
+System.Data.SqlClient
+
+
+Database Definitions
+To Publish DB:
+    • Select IntegrationDB.publish.xml from IntegrationDB project
+    • Click Publish,  DB and tables will be generated
+
+Default Connection Example:
+    "DefaultConnection": "Data Source=(localdb)\\MSSQLLocalDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;attachdbfilename=c:\\Users\\ivelt_ul7a8\\source\\repos\\DB2\\DB2\\Test.mdf"
+
+DB Schema:
+=========================================================================
+CREATE TABLE [dbo].[ExchangeUsers] (
+    [CustomerID] INT          IDENTITY (1, 1) NOT NULL,
+    [Account]    VARCHAR (56) NOT NULL,
+    [Balance]    INT          DEFAULT ((0)) NOT NULL,
+    PRIMARY KEY CLUSTERED ([CustomerID] ASC)
+);
+CREATE TABLE [dbo].[StellarCursor] (
+    [Id]       INT          IDENTITY (1, 1) NOT NULL,
+    [CursorNo] VARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+CREATE TABLE [dbo].[StellarDeposits] (
+    [Id]         INT      IDENTITY (1, 1) NOT NULL,
+    [Amount]     INT      DEFAULT ((0)) NOT NULL,
+    [Date]       DATETIME NOT NULL,
+    [CustomerId] INT      NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+CREATE TABLE [dbo].[StellarTransactions] (
+    [UserId]      INT          NOT NULL,
+    [Destination] VARCHAR (56) NOT NULL,
+    [XLMAmount]   INT          NOT NULL,
+    [State]       VARCHAR (8)  NOT NULL
+);
